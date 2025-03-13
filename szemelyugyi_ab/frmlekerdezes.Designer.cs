@@ -40,11 +40,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txsearch = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbab = new System.Windows.Forms.RadioButton();
-            this.rbdis = new System.Windows.Forms.RadioButton();
             this.rball = new System.Windows.Forms.RadioButton();
+            this.rbdis = new System.Windows.Forms.RadioButton();
+            this.rbab = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbatlag = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgadatok)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -134,6 +134,7 @@
             this.txsearch.Name = "txsearch";
             this.txsearch.Size = new System.Drawing.Size(123, 20);
             this.txsearch.TabIndex = 2;
+            this.txsearch.TextChanged += new System.EventHandler(this.txsearch_TextChanged);
             // 
             // groupBox1
             // 
@@ -147,16 +148,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Státusz";
             // 
-            // rbab
+            // rball
             // 
-            this.rbab.AutoSize = true;
-            this.rbab.Location = new System.Drawing.Point(7, 20);
-            this.rbab.Name = "rbab";
-            this.rbab.Size = new System.Drawing.Size(70, 17);
-            this.rbab.TabIndex = 0;
-            this.rbab.TabStop = true;
-            this.rbab.Text = "Aktívak";
-            this.rbab.UseVisualStyleBackColor = true;
+            this.rball.AutoSize = true;
+            this.rball.Location = new System.Drawing.Point(7, 66);
+            this.rball.Name = "rball";
+            this.rball.Size = new System.Drawing.Size(76, 17);
+            this.rball.TabIndex = 2;
+            this.rball.TabStop = true;
+            this.rball.Text = "Mindenki";
+            this.rball.UseVisualStyleBackColor = true;
+            this.rball.CheckedChanged += new System.EventHandler(this.rball_CheckedChanged);
             // 
             // rbdis
             // 
@@ -168,35 +170,37 @@
             this.rbdis.TabStop = true;
             this.rbdis.Text = "Kilépettek";
             this.rbdis.UseVisualStyleBackColor = true;
+            this.rbdis.CheckedChanged += new System.EventHandler(this.rbdis_CheckedChanged);
             // 
-            // rball
+            // rbab
             // 
-            this.rball.AutoSize = true;
-            this.rball.Location = new System.Drawing.Point(7, 66);
-            this.rball.Name = "rball";
-            this.rball.Size = new System.Drawing.Size(76, 17);
-            this.rball.TabIndex = 2;
-            this.rball.TabStop = true;
-            this.rball.Text = "Mindenki";
-            this.rball.UseVisualStyleBackColor = true;
+            this.rbab.AutoSize = true;
+            this.rbab.Location = new System.Drawing.Point(7, 20);
+            this.rbab.Name = "rbab";
+            this.rbab.Size = new System.Drawing.Size(70, 17);
+            this.rbab.TabIndex = 0;
+            this.rbab.TabStop = true;
+            this.rbab.Text = "Aktívak";
+            this.rbab.UseVisualStyleBackColor = true;
+            this.rbab.CheckedChanged += new System.EventHandler(this.rbab_CheckedChanged);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lbatlag);
             this.panel1.Location = new System.Drawing.Point(17, 446);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(897, 63);
             this.panel1.TabIndex = 4;
             // 
-            // label2
+            // lbatlag
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "label2";
+            this.lbatlag.AutoSize = true;
+            this.lbatlag.Location = new System.Drawing.Point(8, 25);
+            this.lbatlag.Name = "lbatlag";
+            this.lbatlag.Size = new System.Drawing.Size(41, 13);
+            this.lbatlag.TabIndex = 0;
+            this.lbatlag.Text = "label2";
             // 
             // frmlekerdezes
             // 
@@ -242,6 +246,6 @@
         private System.Windows.Forms.RadioButton rbdis;
         private System.Windows.Forms.RadioButton rbab;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbatlag;
     }
 }

@@ -109,6 +109,7 @@ namespace szemelyugyi_ab
                     lekerdezes = "insert into szemely_telep(szemid,tid) values ('"+txszemid.Text+"','"+tid+"')";
                     ab = new Adatbazis(lekerdezes);
                     ab.Dr.Read();
+                    MessageBox.Show("Sikeres adatbetöltés","SIKER", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
